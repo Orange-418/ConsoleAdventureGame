@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1550812003 source:c:\users\dylanc\documents\c++\consoleadventure\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<windows.h>
+
