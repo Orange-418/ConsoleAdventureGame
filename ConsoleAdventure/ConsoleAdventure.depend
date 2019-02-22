@@ -1,7 +1,51 @@
 # depslib dependency file v1.0
-1550812003 source:c:\users\dylanc\documents\c++\consoleadventure\main.cpp
+1550821081 source:c:\users\dylanc\documents\c++\consoleadventure\main.cpp
 	<iostream>
 	<string>
+	<windows.h>
+	"checkPlayerMovement.h"
+	"map_Tutorial.h"
+
+1550815209 source:c:\users\dylanc\documents\c++\consoleadventure\checkplayermovement.cpp
+	"checkPlayerMovement.h"
+
+1550814203 c:\users\dylanc\documents\c++\consoleadventure\checkplayermovement.h
+	<vector>
+
+1550814211 source:c:\users\dylanc\documents\c++\consoleadventure\gamerunloop.cpp
+	"gameRunLoop.h"
+
+1550814203 c:\users\dylanc\documents\c++\consoleadventure\gamerunloop.h
+
+1550821604 source:c:\users\dylanc\documents\c++\consoleadventure\map_tutorial.cpp
+	"map_Tutorial.h"
+	"map_TutHouse.h"
+	"portalHandler.h"
+	"checkPlayerMovement.h"
 	<vector>
 	<windows.h>
+	<iostream>
+	<string>
+
+1550821090 c:\users\dylanc\documents\c++\consoleadventure\map_tutorial.h
+	<string>
+
+1550825011 source:c:\users\dylanc\documents\c++\consoleadventure\portalhandler.cpp
+	"portalHandler.h"
+
+1550821214 c:\users\dylanc\documents\c++\consoleadventure\portalhandler.h
+	<string>
+	<vector>
+
+1550821198 c:\users\dylanc\documents\c++\consoleadventure\map_tuthouse.h
+	<string>
+
+1550824815 source:c:\users\dylanc\documents\c++\consoleadventure\map_tuthouse.cpp
+	"map_TutHouse.h"
+	"map_Tutorial.h"
+	"portalHandler.h"
+	"checkPlayerMovement.h"
+	<vector>
+	<windows.h>
+	<iostream>
 
