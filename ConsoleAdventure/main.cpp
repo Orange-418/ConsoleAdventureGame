@@ -1,8 +1,6 @@
-#include <iostream>
 #include <string>
-#include <windows.h>
-#include "checkPlayerMovement.h"
 #include "map_Tutorial.h"
+#include "mapLoader.h"
 
 //1 = right
 //2 = left
@@ -12,15 +10,7 @@
 
 int main()
 {
-    map_Tutorial tutorial;
-    std::string level;
-    bool running = true;
-    int health = 100;
-    int posx;
-    int posy;
-    int direction;
-
-    tutorial.loadMap(level, running, health, posx, posy, direction);
-
+    mapLoader loadMap;
+    loadMap.load("map_Tutorial");
     return 0;
 }

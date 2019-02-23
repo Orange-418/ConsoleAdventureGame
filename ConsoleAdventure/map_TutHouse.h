@@ -5,9 +5,7 @@
 class map_TutHouse
 {
     public:
-        std::string tutHouse(bool running, int health, int posx, int posy, int direction, std::string level);
-
-    protected:
+        std::string tutHouse(bool running, int health, int posx, int posy, int direction);
 
     private:
 };

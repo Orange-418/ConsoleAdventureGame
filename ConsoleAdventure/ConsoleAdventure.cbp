@@ -36,13 +36,17 @@
 		<Unit filename="checkPlayerMovement.h" />
 		<Unit filename="gameRunLoop.cpp" />
 		<Unit filename="gameRunLoop.h" />
+		<Unit filename="inputController.cpp" />
+		<Unit filename="inputController.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mapLoader.cpp" />
+		<Unit filename="mapLoader.h" />
 		<Unit filename="map_TutHouse.cpp" />
 		<Unit filename="map_TutHouse.h" />
 		<Unit filename="map_Tutorial.cpp" />
 		<Unit filename="map_Tutorial.h" />
-		<Unit filename="portalHandler.cpp" />
-		<Unit filename="portalHandler.h" />
+		<Unit filename="npc_Mentor.cpp" />
+		<Unit filename="npc_Mentor.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

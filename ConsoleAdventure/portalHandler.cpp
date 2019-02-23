@@ -1,8 +1,8 @@
 #include "portalHandler.h"
 
-std::string portalHandler::handle(int posx, int posy, std::string whichPortal, std::vector<std::vector<char>> map, int direction, std::string level)
+std::string portalHandler::handle(int posx, int posy, std::vector<std::vector<char>> map, int direction)
 {
-    if(level == "map_Tutorial"){
+    //if(level == "map_Tutorial"){
     if(direction == 1)
     {
         if(map[posy][posx+1] == 'O')
@@ -25,7 +25,7 @@ std::string portalHandler::handle(int posx, int posy, std::string whichPortal, s
         {
             return "";
         }
-    }
+   // }
 
     if(direction == 3)
     {
@@ -52,8 +52,8 @@ std::string portalHandler::handle(int posx, int posy, std::string whichPortal, s
     }
     }
 
-    if(level == "map_TutHouse")
-    {
+   // if(level == "map_TutHouse")
+   // {
            /* if(map[posy][posx+1] == 'O')
         {
             for(int y = 0; y < 10; y++)
@@ -123,5 +123,5 @@ std::string portalHandler::handle(int posx, int posy, std::string whichPortal, s
         }
     }
     }
-    }
+  ///  }
 

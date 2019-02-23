@@ -34,6 +34,9 @@ bool checkPlayerMovement::checkMove(int posx, int posy, std::vector<std::vector<
                 case 'O':
                     return false;
                     break;
+                case '8':
+                    return false;
+                    break;
                 default:
                     break;
             }
@@ -66,6 +69,9 @@ bool checkPlayerMovement::checkMove(int posx, int posy, std::vector<std::vector<
                     return false;
                     break;
                 case 'O':
+                    return false;
+                    break;
+                case '8':
                     return false;
                     break;
                 default:
@@ -102,6 +108,9 @@ bool checkPlayerMovement::checkMove(int posx, int posy, std::vector<std::vector<
                 case 'O':
                     return false;
                     break;
+                case '8':
+                    return false;
+                    break;
                 default:
                     break;
             }
@@ -134,6 +143,9 @@ bool checkPlayerMovement::checkMove(int posx, int posy, std::vector<std::vector<
                     return false;
                     break;
                 case 'O':
+                    return false;
+                    break;
+                case '8':
                     return false;
                     break;
                 default:
