@@ -1,22 +1,16 @@
 #ifndef MAPLOADER_H
 #define MAPLOADER_H
 #include <string>
+#include <vector>
 
 class mapLoader
 {
     public:
-        void load(std::string mapName);
-        void mapSetter(std::string mapName);
-        void healthSetter(int healthSet);
-        std::string mapGetter();
-        int healthGetter();
+
+    void loadNewMap(std::string mapToLoad, int health, std::vector<std::string>inventory, int posX, int posY);
 
     private:
-    bool running = true;
-    int health = 100;
-    int posx;
-    int posy;
-    int direction;
 };
 
-#endif // MAPLOADER_H
+#endif
+

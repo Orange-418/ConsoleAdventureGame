@@ -1,40 +1,19 @@
 #include "mapLoader.h"
-#include "map_Tutorial.h"
 #include "map_TutHouse.h"
-#include <iostream>
-void mapLoader::load(std::string mapName)
+#include "map_TutorialIsland.h"
+
+void mapLoader::loadNewMap(std::string mapToLoad, int health, std::vector<std::string>inventory, int posX, int posY)
 {
-    map_Tutorial tutorial;
-    map_TutHouse tutHouseMap;
+    map_TutorialIsland loadTutorialIsland;
+    map_TutHouse loadTutHouse;
 
-    if(mapName == "map_Tutorial")
+    if(mapToLoad == "map_TutHouse")
     {
-        tutorial.loadMap(running, health, posx, posy, direction);
-
+        loadTutHouse.loadMap(health, inventory, posX, posY);
     }
 
-    if(mapName == "map_TutHouse")
+    if(mapToLoad == "map_TutorialIsland")
     {
-        tutHouseMap.tutHouse(running, health, posx, posy, direction);
+        loadTutorialIsland.loadMap(health, inventory, posX, posY);
     }
-}
-
-void mapLoader::mapSetter(std::string mapName)
-{
-    //level = mapName;
-}
-
-std::string mapLoader::mapGetter()
-{
-    //return level;
-}
-
-void mapLoader::healthSetter(int healthSet)
-{
-    //healthSet = health;
-}
-
-int mapLoader::healthGetter()
-{
-    //return health;
 }

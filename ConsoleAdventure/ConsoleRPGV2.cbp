@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ConsoleAdventure" />
+		<Option title="ConsoleRPGV2" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ConsoleAdventure" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/ConsoleRPGV2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ConsoleAdventure" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/ConsoleRPGV2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -30,28 +30,26 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++14" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="checkPlayerMovement.cpp" />
-		<Unit filename="checkPlayerMovement.h" />
-		<Unit filename="gameRunLoop.cpp" />
-		<Unit filename="gameRunLoop.h" />
-		<Unit filename="inputController.cpp" />
-		<Unit filename="inputController.h" />
+		<Unit filename="checkNextBlock.cpp" />
+		<Unit filename="checkNextBlock.h" />
+		<Unit filename="inputHandler.cpp" />
+		<Unit filename="inputHandler.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mapLoader.cpp" />
 		<Unit filename="mapLoader.h" />
 		<Unit filename="map_TutHouse.cpp" />
 		<Unit filename="map_TutHouse.h" />
-		<Unit filename="map_Tutorial.cpp" />
-		<Unit filename="map_Tutorial.h" />
-		<Unit filename="npc_Mentor.cpp" />
-		<Unit filename="npc_Mentor.h" />
+		<Unit filename="map_TutorialIsland.cpp" />
+		<Unit filename="map_TutorialIsland.h" />
+		<Unit filename="npc_TutorialMaster.cpp" />
+		<Unit filename="npc_TutorialMaster.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

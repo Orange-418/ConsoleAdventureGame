@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1551080004 source:c:\users\dylanc\documents\c++\consolerpgv2\main.cpp
+	<vector>
+	<string>
+	"map_TutorialIsland.h"
+	"mapLoader.h"
+
+1551082627 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.cpp
+	"map_TutorialIsland.h"
+	"checkNextBlock.h"
+	"inputHandler.h"
+	"windows.h"
+	"mapLoader.h"
+
+1551084855 c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.h
+	<iostream>
+	<thread>
+	<vector>
+
+1551048153 source:c:\users\dylanc\documents\c++\consolerpgv2\charlist.cpp
+	"charList.h"
+
+1551047211 c:\users\dylanc\documents\c++\consolerpgv2\charlist.h
+	<string>
+	<vector>
+
+1551076962 source:c:\users\dylanc\documents\c++\consolerpgv2\checknextblock.cpp
+	"checkNextBlock.h"
+
+1551053754 c:\users\dylanc\documents\c++\consolerpgv2\checknextblock.h
+
+1551067554 source:c:\users\dylanc\documents\c++\consolerpgv2\inputhandler.cpp
+	"inputHandler.h"
+
+1551067554 c:\users\dylanc\documents\c++\consolerpgv2\inputhandler.h
+	<vector>
+
+1551052121 source:c:\users\dylanc\documents\c++\consolerpgv2\controller.cpp
+	"controller.h"
+	"checkNextBlock.h"
+	"windows.h"
+
+1551052100 c:\users\dylanc\documents\c++\consolerpgv2\controller.h
+	<vector>
+
+1551053214 source:c:\users\dylanc\documents\c++\consolerpgv2\global.cpp
+
+1551075664 c:\users\dylanc\documents\c++\consolerpgv2\global.h
+
+1551067605 c:\users\dylanc\documents\c++\consolerpgv2\maploader.h
+	<string>
+	<vector>
+
+1551084885 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.cpp
+	"map_TutHouse.h"
+	"map_TutorialIsland.h"
+	"checkNextBlock.h"
+	"inputHandler.h"
+	"npc_TutorialMaster.h"
+	"windows.h"
+	"mapLoader.h"
+
+1551084855 c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.h
+	<iostream>
+	<thread>
+	<vector>
+
+1551075398 source:c:\users\dylanc\documents\c++\consolerpgv2\maploader.cpp
+	"mapLoader.h"
+	"map_TutHouse.h"
+	"map_TutorialIsland.h"
+
+1551083345 source:c:\users\dylanc\documents\c++\consolerpgv2\npc_tutorialmaster.cpp
+	"npc_TutorialMaster.h"
+	"windows.h"
+	<iostream>
+	<thread>
+
+1551083142 c:\users\dylanc\documents\c++\consolerpgv2\npc_tutorialmaster.h
+	<vector>
+	<string>
+

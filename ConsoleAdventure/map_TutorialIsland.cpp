@@ -1,20 +1,20 @@
-#include "map_TutHouse.h"
 #include "map_TutorialIsland.h"
+#include "map_TutHouse.h"
 #include "checkNextBlock.h"
 #include "inputHandler.h"
-#include "npc_TutorialMaster.h"
 #include "windows.h"
 #include "mapLoader.h"
 
-void map_TutHouse::moveCursor(int x, int y)
+void map_TutorialIsland::moveCursor(int x, int y)
 {
     COORD coord;
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+
 }
 
-void map_TutHouse::hideCursor()
+void map_TutorialIsland::hideCursor()
 {
    CONSOLE_CURSOR_INFO info;
    info.dwSize = 100;
@@ -22,25 +22,32 @@ void map_TutHouse::hideCursor()
    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int posX, int posY)
+void map_TutorialIsland::loadMap(int health, std::vector<std::string> inventory, int posX, int posY)
 {
-    map_TutorialIsland tutIsland;
     checkNextBlock checkBlock;
     inputHandler userPos;
     mapLoader load;
-    npc_TutorialMaster talkTutMaster;
+    map_TutHouse TutHouse;
 
     hideCursor();
 
+    pathCleared = TutHouse.isPathCleared();
     playerX = userPos.returnX(map, sizeX, sizeY);
     playerY = userPos.returnY(map, sizeX, sizeY);
 
     map[playerY][playerX] = ' ';
     map[posY][posX] = '@';
-    status = "*There's a man standing in the middle of the room. Maybe I can use [Enter] to talk to him*";
+    //status = "*You see a house... You might be able to go inside*";
+
+    if(pathCleared)
+    {
+        map[1][0] = 'O';
+        status = "sadfdf";
+    }
 
     system("cls");
     Sleep(125);
+
     while(running)
     {
         playerX = userPos.returnX(map, sizeX, sizeY);
@@ -57,11 +64,11 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
             }
             else
             {
-                if(playerX+1 == doorX && playerY == doorY)
+                if(playerX == houseX+1 && playerY == houseY)
                 {
-                    posX = 7;
-                    posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    posX = 1;
+                    posY = 3;
+                    load.loadNewMap("map_TutHouse", health, inventory, posX, posY);
                 }
             }
         }
@@ -76,11 +83,11 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
             }
             else
             {
-                if(playerX-1 == doorX && playerY == doorY)
+                if(playerX == houseX-1 && playerY == houseY)
                 {
-                    posX = 7;
-                    posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    posX = 1;
+                    posY = 3;
+                   load.loadNewMap("map_TutHouse", health, inventory, posX, posY);
                 }
             }
         }
@@ -95,11 +102,11 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
             }
             else
             {
-                if(playerX == doorX && playerY-1 == doorY)
+                if(playerX == houseX && playerY-1== houseY)
                 {
-                    posX = 7;
-                    posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    posX = 1;
+                    posY = 3;
+                    load.loadNewMap("map_TutHouse", health, inventory, posX, posY);
                 }
             }
         }
@@ -114,22 +121,12 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
             }
             else
             {
-                if(playerX == doorX && playerY+1 == doorY)
+                if(playerX == houseX && playerY+1 == houseY)
                 {
-                    posX = 7;
-                    posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    posX = 1;
+                    posY = 3;
+                    load.loadNewMap("map_TutHouse", health, inventory, posX, posY);
                 }
-            }
-        }
-
-        if(GetAsyncKeyState(VK_RETURN))
-        {
-            if(playerX+1 == tutMasterX || playerX-1 == tutMasterX || playerY+1 == tutMasterY || playerY-1 == tutMasterY)
-            {
-                pathCleared = talkTutMaster.interact();
-                system("cls");
-                Sleep(75);
             }
         }
 
@@ -144,10 +141,6 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
         }
         std::cout<<std::endl;
         std::cout << status << std::endl;
-    }
-}
 
-bool map_TutHouse::isPathCleared()
-{
-    return pathCleared;
+    }
 }

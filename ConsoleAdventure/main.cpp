@@ -1,16 +1,23 @@
+#include <vector>
 #include <string>
-#include "map_Tutorial.h"
+#include "map_TutorialIsland.h"
 #include "mapLoader.h"
-
-//1 = right
-//2 = left
-//3 = up
-//4 = down
-
 
 int main()
 {
-    mapLoader loadMap;
-    loadMap.load("map_Tutorial");
+    int posX = 1;
+    int posY = 1;
+    int health = 100;
+    std::vector<std::string> inventory;
+
+    mapLoader load;
+
+    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+
     return 0;
 }
+
+
+
+
+//fix double characters by making a checkfordouble function, return true and continue with key input
