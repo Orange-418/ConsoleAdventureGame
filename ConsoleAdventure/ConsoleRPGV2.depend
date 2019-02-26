@@ -1,21 +1,24 @@
 # depslib dependency file v1.0
-1551080004 source:c:\users\dylanc\documents\c++\consolerpgv2\main.cpp
+1551164861 source:c:\users\dylanc\documents\c++\consolerpgv2\main.cpp
 	<vector>
+	<tuple>
 	<string>
 	"map_TutorialIsland.h"
-	"mapLoader.h"
+	"map_TutorialIslandCleared.h"
+	"map_TutHouse.h"
 
-1551082627 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.cpp
+1551164341 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.cpp
 	"map_TutorialIsland.h"
 	"checkNextBlock.h"
 	"inputHandler.h"
 	"windows.h"
-	"mapLoader.h"
+	<tuple>
 
-1551084855 c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.h
+1551144232 c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialisland.h
 	<iostream>
 	<thread>
 	<vector>
+	<tuple>
 
 1551048153 source:c:\users\dylanc\documents\c++\consolerpgv2\charlist.cpp
 	"charList.h"
@@ -51,7 +54,7 @@
 	<string>
 	<vector>
 
-1551084885 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.cpp
+1551164720 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.cpp
 	"map_TutHouse.h"
 	"map_TutorialIsland.h"
 	"checkNextBlock.h"
@@ -60,17 +63,18 @@
 	"windows.h"
 	"mapLoader.h"
 
-1551084855 c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.h
+1551162494 c:\users\dylanc\documents\c++\consolerpgv2\map_tuthouse.h
 	<iostream>
 	<thread>
 	<vector>
+	<tuple>
 
-1551075398 source:c:\users\dylanc\documents\c++\consolerpgv2\maploader.cpp
+1551145912 source:c:\users\dylanc\documents\c++\consolerpgv2\maploader.cpp
 	"mapLoader.h"
 	"map_TutHouse.h"
 	"map_TutorialIsland.h"
 
-1551083345 source:c:\users\dylanc\documents\c++\consolerpgv2\npc_tutorialmaster.cpp
+1551164540 source:c:\users\dylanc\documents\c++\consolerpgv2\npc_tutorialmaster.cpp
 	"npc_TutorialMaster.h"
 	"windows.h"
 	<iostream>
@@ -79,4 +83,23 @@
 1551083142 c:\users\dylanc\documents\c++\consolerpgv2\npc_tutorialmaster.h
 	<vector>
 	<string>
+
+1551144232 c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialislandcleared.h
+	<iostream>
+	<thread>
+	<vector>
+	<tuple>
+
+1551164703 source:c:\users\dylanc\documents\c++\consolerpgv2\map_tutorialislandcleared.cpp
+	"map_TutorialIslandCleared.h"
+	"checkNextBlock.h"
+	"inputHandler.h"
+	"windows.h"
+	"mapLoader.h"
+	<tuple>
+
+1551165355 source:c:\users\dylanc\documents\c++\consolerpgv2\inventorymenu.cpp
+	"inventoryMenu.h"
+
+1551164341 c:\users\dylanc\documents\c++\consolerpgv2\inventorymenu.h
 

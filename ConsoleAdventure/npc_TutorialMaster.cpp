@@ -25,6 +25,11 @@ bool npc_TutorialMaster::interact()
     hideCursor();
     system("cls");
     Sleep(100);
+    options = optionsDefault;   //reset options to default from previous interactions
+    options[0] = "[";
+    options[2] = "]";
+    numRight = 2;
+    status = "Hi, i'm TutorialMaster Bob. How can I help you?";
 
     while(interacting)
     {
@@ -96,6 +101,7 @@ bool npc_TutorialMaster::interact()
 
         if(GetAsyncKeyState(VK_RETURN))
         {
+            system("cls");
             switch(numRight)
             {
                 case 1:

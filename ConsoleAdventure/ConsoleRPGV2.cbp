@@ -30,20 +30,22 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-std=c++14" />
+			<Add option="-std=c++1z" />
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="checkNextBlock.cpp" />
 		<Unit filename="checkNextBlock.h" />
 		<Unit filename="inputHandler.cpp" />
 		<Unit filename="inputHandler.h" />
+		<Unit filename="inventoryMenu.cpp" />
+		<Unit filename="inventoryMenu.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="mapLoader.cpp" />
-		<Unit filename="mapLoader.h" />
 		<Unit filename="map_TutHouse.cpp" />
 		<Unit filename="map_TutHouse.h" />
 		<Unit filename="map_TutorialIsland.cpp" />
 		<Unit filename="map_TutorialIsland.h" />
+		<Unit filename="map_TutorialIslandCleared.cpp" />
+		<Unit filename="map_TutorialIslandCleared.h" />
 		<Unit filename="npc_TutorialMaster.cpp" />
 		<Unit filename="npc_TutorialMaster.h" />
 		<Extensions>

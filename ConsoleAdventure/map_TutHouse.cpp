@@ -22,7 +22,7 @@ void map_TutHouse::hideCursor()
    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int posX, int posY)
+std::tuple<std::string, int, std::vector<std::string>, int, int, bool> map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int posX, int posY, bool isCleared)
 {
     map_TutorialIsland tutIsland;
     checkNextBlock checkBlock;
@@ -61,7 +61,15 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
                 {
                     posX = 7;
                     posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    if(isCleared)
+                    {
+                        mapToLoad = "map_TutorialIslandCleared";
+                    }
+                    else
+                    {
+                        mapToLoad = "map_TutorialIsland";
+                    }
+                    return std::make_tuple(mapToLoad, health, inventory, posX, posY, isCleared);
                 }
             }
         }
@@ -80,7 +88,15 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
                 {
                     posX = 7;
                     posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    if(isCleared)
+                    {
+                        mapToLoad = "map_TutorialIslandCleared";
+                    }
+                    else
+                    {
+                        mapToLoad = "map_TutorialIsland";
+                    }
+                    return std::make_tuple(mapToLoad, health, inventory, posX, posY, isCleared);
                 }
             }
         }
@@ -99,7 +115,15 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
                 {
                     posX = 7;
                     posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    if(isCleared)
+                    {
+                        mapToLoad = "map_TutorialIslandCleared";
+                    }
+                    else
+                    {
+                        mapToLoad = "map_TutorialIsland";
+                    }
+                    return std::make_tuple(mapToLoad, health, inventory, posX, posY, isCleared);
                 }
             }
         }
@@ -118,16 +142,32 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
                 {
                     posX = 7;
                     posY = 6;
-                    load.loadNewMap("map_TutorialIsland", health, inventory, posX, posY);
+                    if(isCleared)
+                    {
+                        mapToLoad = "map_TutorialIslandCleared";
+                    }
+                    else
+                    {
+                        mapToLoad = "map_TutorialIsland";
+                    }
+                    return std::make_tuple(mapToLoad, health, inventory, posX, posY, isCleared);
                 }
             }
         }
 
         if(GetAsyncKeyState(VK_RETURN))
         {
-            if(playerX+1 == tutMasterX || playerX-1 == tutMasterX || playerY+1 == tutMasterY || playerY-1 == tutMasterY)
+            if(nextToTutMaster(map, playerX, playerY))
             {
-                pathCleared = talkTutMaster.interact();
+                Sleep(25);
+                if(!isCleared)
+                {
+                    isCleared = talkTutMaster.interact();
+                }
+                else
+                {
+                    talkTutMaster.interact();
+                }
                 system("cls");
                 Sleep(75);
             }
@@ -144,10 +184,27 @@ void map_TutHouse::loadMap(int health, std::vector<std::string>inventory, int po
         }
         std::cout<<std::endl;
         std::cout << status << std::endl;
+        std::cout<<std::endl;
+        std::cout << "health: " << health << std::endl;
     }
 }
 
-bool map_TutHouse::isPathCleared()
+bool map_TutHouse::nextToTutMaster(std::vector<std::vector<char>> map, int playerX, int playerY)
 {
-    return pathCleared;
+    if(map[playerY+1][playerX] == '&')
+    {
+        return true;
+    }
+    if(map[playerY-1][playerX] == '&')
+    {
+        return true;
+    }
+    if(map[playerY][playerX+1] == '&')
+    {
+        return true;
+    }
+    if(map[playerY][playerX-1] == '&')
+    {
+        return true;
+    }
 }

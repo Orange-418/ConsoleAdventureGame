@@ -1,11 +1,11 @@
-#ifndef MAP_TUTORIALISLAND_H
-#define MAP_TUTORIALISLAND_H
+#ifndef MAP_TUTORIALISLANDCLEARED_H
+#define MAP_TUTORIALISLANDCLEARED_H
 #include <iostream>
 #include <thread>
 #include <vector>
 #include <tuple>
 
-class map_TutorialIsland
+class map_TutorialIslandCleared
 {
     public:
 
@@ -28,7 +28,7 @@ class map_TutorialIsland
         bool running = true;
 
         std::vector<std::vector<char>> map {{'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
-                                            {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},  //
+                                            {'O',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},  //
                                             {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},  //
                                             {'#',' ','@',' ',' ',' ',' ','_',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},  //  ___
                                             {'#',' ',' ',' ',' ','_','-','_','-','_',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},  //  |_|
@@ -39,4 +39,4 @@ class map_TutorialIsland
                                             {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'}};
 };
 
-#endif
+#endif // MAP_TUTORIALISLANDCLEARED_H

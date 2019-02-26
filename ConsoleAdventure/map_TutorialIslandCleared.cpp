@@ -1,10 +1,11 @@
-#include "map_TutorialIsland.h"
+#include "map_TutorialIslandCleared.h"
 #include "checkNextBlock.h"
 #include "inputHandler.h"
 #include "windows.h"
+#include "mapLoader.h"
 #include <tuple>
 
-void map_TutorialIsland::moveCursor(int x, int y)
+void map_TutorialIslandCleared::moveCursor(int x, int y)
 {
     COORD coord;
     coord.X = x;
@@ -13,7 +14,7 @@ void map_TutorialIsland::moveCursor(int x, int y)
 
 }
 
-void map_TutorialIsland::hideCursor()
+void map_TutorialIslandCleared::hideCursor()
 {
    CONSOLE_CURSOR_INFO info;
    info.dwSize = 100;
@@ -21,32 +22,28 @@ void map_TutorialIsland::hideCursor()
    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-std::tuple<std::string, int, std::vector<std::string>, int, int> map_TutorialIsland::loadMap(int health, std::vector<std::string> inventory, int posX, int posY)
+std::tuple<std::string, int, std::vector<std::string>, int, int> map_TutorialIslandCleared::loadMap(int health, std::vector<std::string> inventory, int posX, int posY)
 {
     checkNextBlock checkBlock;
     inputHandler userPos;
+    mapLoader load;
 
     hideCursor();
 
     playerX = userPos.returnX(map, sizeX, sizeY);
     playerY = userPos.returnY(map, sizeX, sizeY);
 
-    map[playerY][playerX] = ' ';    //sets the player on the map upon given coords, clarified from previous map
+    map[playerY][playerX] = ' ';
     map[posY][posX] = '@';
-    status = "*You see a house... You might be able to go inside*";
+    status = "It seems the path has been cleared. Btw, you can use 'i' to open your inventory.";
 
     system("cls");
     Sleep(125);
 
     while(running)
     {
-        playerX = userPos.returnX(map, sizeX, sizeY);   //get players coordinates
+        playerX = userPos.returnX(map, sizeX, sizeY);
         playerY = userPos.returnY(map, sizeX, sizeY);
-
-        if(GetAsyncKeyState(0x49))  //if key I is pressed
-        {
-
-        }
 
         if(GetAsyncKeyState(VK_RIGHT) && !GetAsyncKeyState(VK_LEFT) && !GetAsyncKeyState(VK_UP) && !GetAsyncKeyState(VK_DOWN))
         {
